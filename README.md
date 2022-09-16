@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # NFT Marketplace
 
 ## Technology Stack & Tools
@@ -50,4 +50,4 @@ MIT
 =======
 # Jai-Mata-Di
 Let's Rock
->>>>>>> 4961a9e13163d6bbe04fb44fc6ebb428c20ecc05
+
