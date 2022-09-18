@@ -25,6 +25,12 @@ import Error from "./Error";
 
 
 
+import StudentsCard from './Card/StudentsCard';
+import StudentInfo from './Card/StudentInfo';
+import SemesterCard from "./Card/SemPage";
+import SemInfo from './Card/SemInfo';
+
+import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -79,6 +85,37 @@ function App() {
   const verifierAccount = "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC";
 
   return (
+    // <BrowserRouter>
+    //   <div className="App">
+    //     <>
+    //       <Navigation web3Handler={web3Handler} account={account} />
+    //     </>
+    //     <div>
+    //       {loading ? (
+    //         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
+    //           <Spinner animation="border" style={{ display: 'flex' }} />
+    //           <p className='mx-3 my-0'>Awaiting Metamask Connection...</p>
+    //         </div>
+    //       ) : (
+    //         <Routes>
+    //           <Route path="/" element={
+    //             <Home marketplace={marketplace} nft={nft} />
+    //           } />
+    //           <Route path="/create" element={
+    //             <Create marketplace={marketplace} nft={nft} />
+    //           } />
+    //           <Route path="/my-listed-items" element={
+    //             <MyListedItems marketplace={marketplace} nft={nft} account={account} />
+    //           } />
+    //           <Route path="/my-purchases" element={
+    //             <MyPurchases marketplace={marketplace} nft={nft} account={account} />
+    //           } />
+    //         </Routes>
+    //       )}
+    //     </div>
+    //   </div>
+    // </BrowserRouter>
+    
     <BrowserRouter>
       <div className="App">
         <Navigation web3Handler={web3Handler} account={account} studentAccount={studentAccount} teacherAccount={teacherAccount} verifierAccount={verifierAccount} />
