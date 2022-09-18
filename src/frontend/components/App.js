@@ -35,6 +35,11 @@ import SemInfo from './Card/SemInfo';
 import BranchInfo from './Card/BranchInfo';
 import BranchCard from './Card/BranchCard';
 
+import StudentsCard from './Card/StudentsCard';
+import StudentInfo from './Card/StudentInfo';
+import SemesterCard from "./Card/SemPage";
+import SemInfo from './Card/SemInfo';
+
 import './App.css';
 
 function App() {
@@ -166,6 +171,16 @@ function App() {
       </Routes>
     </div>
 
+    <div className="App">
+      <Routes>
+        {/* <Route path="/students" element={<StudentsCard />} />
+        <Route path="/students/:id" element={<StudentInfo />} /> */}
+        <Route path="/semester"  element={<SemesterCard/>} />
+        <Route path="/semester/:id" element={<SemInfo/>} />
+        <Route path="/semester/:id/students" element={<StudentsCard />} />
+        <Route path="/semester/:id/students/:sid" element={<StudentInfo />} /> 
+      </Routes>
+    </div>
     </BrowserRouter>
   );
 }
