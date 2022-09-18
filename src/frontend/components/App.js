@@ -16,6 +16,11 @@ import { useState } from 'react'
 import { ethers } from "ethers"
 import { Spinner } from 'react-bootstrap'
 
+import StudentsCard from './Card/StudentsCard';
+import StudentInfo from './Card/StudentInfo';
+import SemesterCard from "./Card/SemPage";
+import SemInfo from './Card/SemInfo';
+
 import './App.css';
 
 function App() {
@@ -52,37 +57,49 @@ function App() {
   }
 
   return (
+    // <BrowserRouter>
+    //   <div className="App">
+    //     <>
+    //       <Navigation web3Handler={web3Handler} account={account} />
+    //     </>
+    //     <div>
+    //       {loading ? (
+    //         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
+    //           <Spinner animation="border" style={{ display: 'flex' }} />
+    //           <p className='mx-3 my-0'>Awaiting Metamask Connection...</p>
+    //         </div>
+    //       ) : (
+    //         <Routes>
+    //           <Route path="/" element={
+    //             <Home marketplace={marketplace} nft={nft} />
+    //           } />
+    //           <Route path="/create" element={
+    //             <Create marketplace={marketplace} nft={nft} />
+    //           } />
+    //           <Route path="/my-listed-items" element={
+    //             <MyListedItems marketplace={marketplace} nft={nft} account={account} />
+    //           } />
+    //           <Route path="/my-purchases" element={
+    //             <MyPurchases marketplace={marketplace} nft={nft} account={account} />
+    //           } />
+    //         </Routes>
+    //       )}
+    //     </div>
+    //   </div>
+    // </BrowserRouter>
+    
     <BrowserRouter>
-      <div className="App">
-        <>
-          <Navigation web3Handler={web3Handler} account={account} />
-        </>
-        <div>
-          {loading ? (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
-              <Spinner animation="border" style={{ display: 'flex' }} />
-              <p className='mx-3 my-0'>Awaiting Metamask Connection...</p>
-            </div>
-          ) : (
-            <Routes>
-              <Route path="/" element={
-                <Home marketplace={marketplace} nft={nft} />
-              } />
-              <Route path="/create" element={
-                <Create marketplace={marketplace} nft={nft} />
-              } />
-              <Route path="/my-listed-items" element={
-                <MyListedItems marketplace={marketplace} nft={nft} account={account} />
-              } />
-              <Route path="/my-purchases" element={
-                <MyPurchases marketplace={marketplace} nft={nft} account={account} />
-              } />
-            </Routes>
-          )}
-        </div>
-      </div>
+    <div className="App">
+      <Routes>
+        {/* <Route path="/students" element={<StudentsCard />} />
+        <Route path="/students/:id" element={<StudentInfo />} /> */}
+        <Route path="/semester"  element={<SemesterCard/>} />
+        <Route path="/semester/:id" element={<SemInfo/>} />
+        <Route path="/semester/:id/students" element={<StudentsCard />} />
+        <Route path="/semester/:id/students/:sid" element={<StudentInfo />} /> 
+      </Routes>
+    </div>
     </BrowserRouter>
-
   );
 }
 
