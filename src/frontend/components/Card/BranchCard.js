@@ -7,7 +7,7 @@ import "./format.css";
 function BranchCard(){
     let branchList = BranchDetails.allBranch();
     return(
-        <> 
+        <div className='dept'>
            {branchList.map((dept) => (
                 <div className="container" key={dept.branchId} >
                     <Link to={`/department/${dept.branchId}`}>
@@ -17,8 +17,7 @@ function BranchCard(){
                 </div>
                 
             ))}
-            
-        </>
+        </div>
     )
 }
 
