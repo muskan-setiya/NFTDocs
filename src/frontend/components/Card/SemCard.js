@@ -1,6 +1,7 @@
 import SemesterDetails from './SemDetails';
 import BasicCard from './card';
 import { Link } from 'react-router-dom';
+import "./format.css";
 
 function SemesterCard(props){
     let semList = SemesterDetails.allSem();
