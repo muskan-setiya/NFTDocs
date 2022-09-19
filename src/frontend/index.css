@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .dept{
     background-color: rgb(104, 110, 114);
     align-content: center;
@@ -5,3 +6,12 @@
     width: 360;
 }
 
+=======
+.container{
+    background-attachment: rgb(127, 97, 97);
+}
+
+.sem{
+    background-attachment: rgb(127, 97, 97);
+}
+>>>>>>> dabe175 (added cards: branch)

@@ -29,6 +29,14 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { createTheme ,ThemeProvider} from '@mui/material/styles';
+import blue from '@mui/material/colors/blue';
+
+const theme = createTheme({
+  palette: {
+    primary: blue,
+  },
+});
 
 const bull = (
   <Box
@@ -54,7 +62,6 @@ export default function BasicCard(props) {
           {props.address}
         </Typography>
       </CardContent>
-      
     </Card>
   );
 }

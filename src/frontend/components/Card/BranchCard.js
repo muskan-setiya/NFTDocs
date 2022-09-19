@@ -1,12 +1,18 @@
 import BranchDetails from './BranchDetails';
+<<<<<<< HEAD
 import ImgCard from './card';
 import {Link} from 'react-router-dom';
 import "./format.css";
 import Col from 'react-bootstrap/Col';
+=======
+import BasicCard from './card';
+import {Link} from 'react-router-dom';
+>>>>>>> dabe175 (added cards: branch)
 
 function BranchCard(){
     let branchList = BranchDetails.allBranch();
     return(
+<<<<<<< HEAD
         
         <row className='row'>
            {branchList.map((dept) => (
@@ -30,4 +36,18 @@ function BranchCard(){
 }
 
 
+=======
+        <>
+           {branchList.map((dept) => (
+                <div className="container" key={dept.branchId}>
+                    <Link to={`/department/${dept.branchId}`}>
+                        <BasicCard name={dept.branchName} address={dept.branchId} />
+                    </Link>
+                </div>
+            ))}
+        </>
+    )
+}
+
+>>>>>>> dabe175 (added cards: branch)
 export default BranchCard;

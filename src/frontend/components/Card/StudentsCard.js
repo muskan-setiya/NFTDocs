@@ -6,8 +6,11 @@ import "./format.css";
 import { Row } from "react-bootstrap";
 =======
 import BasicCard from "./card";
+<<<<<<< HEAD
 import StudentInfo from "./StudentInfo";
 >>>>>>> 8d01154 (added card components : sen & students)
+=======
+>>>>>>> dabe175 (added cards: branch)
 
 
 function StudentsCard(props) {
@@ -29,7 +32,7 @@ function StudentsCard(props) {
         <>
             {studentList.map((students) => (
                 <div className="container" key={students.studentId}>
-                    <Link to={`/semester/${props.semId}/students/${students.studentId}`}>
+                    <Link to={`/department/${props.branchId}/semester/${props.semId}/students/${students.studentId}`}>
                         <BasicCard name={students.studentName} address={students.studentAddress} />
                     </Link>
                 </div>
