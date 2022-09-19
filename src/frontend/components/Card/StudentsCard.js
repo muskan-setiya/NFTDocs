@@ -1,6 +1,7 @@
 import StudentDetails from "./StudentDetails";
 import { Link } from 'react-router-dom';
 import BasicCard from "./card";
+import "./format.css";
 
 
 function StudentsCard(props) {
