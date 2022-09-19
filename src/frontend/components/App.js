@@ -18,8 +18,10 @@ import { Spinner } from 'react-bootstrap'
 
 import StudentsCard from './Card/StudentsCard';
 import StudentInfo from './Card/StudentInfo';
-import SemesterCard from "./Card/SemPage";
+import SemesterCard from "./Card/SemCard";
 import SemInfo from './Card/SemInfo';
+import BranchInfo from './Card/BranchInfo';
+import BranchCard from './Card/BranchCard';
 
 import './App.css';
 
@@ -93,10 +95,12 @@ function App() {
       <Routes>
         {/* <Route path="/students" element={<StudentsCard />} />
         <Route path="/students/:id" element={<StudentInfo />} /> */}
-        <Route path="/semester"  element={<SemesterCard/>} />
-        <Route path="/semester/:id" element={<SemInfo/>} />
-        <Route path="/semester/:id/students" element={<StudentsCard />} />
-        <Route path="/semester/:id/students/:sid" element={<StudentInfo />} /> 
+        <Route path="/department" element={<BranchCard />} />
+        <Route path="/department/:bid" element={<SemesterCard />} />
+        {/* <Route path="/department/:bid/semester"  element={<SemesterCard/>} /> */}
+        <Route path="/department/:bid/semester/:id" element={<SemInfo/>} />
+        <Route path="/department/:bid/semester/:id/students" element={<StudentsCard />} />
+        <Route path="/department/:bid/semester/:id/students/:sid" element={<StudentInfo />} /> 
       </Routes>
     </div>
     </BrowserRouter>
