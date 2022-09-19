@@ -27,8 +27,10 @@ import Error from "./Error";
 
 import StudentsCard from './Card/StudentsCard';
 import StudentInfo from './Card/StudentInfo';
-import SemesterCard from "./Card/SemPage";
+import SemesterCard from "./Card/SemCard";
 import SemInfo from './Card/SemInfo';
+import BranchInfo from './Card/BranchInfo';
+import BranchCard from './Card/BranchCard';
 
 import './App.css';
 

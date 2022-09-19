@@ -1,7 +1,7 @@
 const SemesterDetails = {
     ds: [
         { semId: 1, branchName: "Data Science" },
-        { semId: 2, branchName: "Data Science"},
+        { semId: 2, branchName: "Data Science"  },
         { semId: 3, branchName: "Data Science" },
         { semId: 4, branchName: "Data Science" },
         { semId: 5, branchName: "Data Science" },
