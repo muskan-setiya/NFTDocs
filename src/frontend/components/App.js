@@ -92,12 +92,11 @@ function App() {
     
     <BrowserRouter>
     <div className="App">
+      <h2>Welcome to NFTDocs!</h2>
       <Routes>
-        {/* <Route path="/students" element={<StudentsCard />} />
-        <Route path="/students/:id" element={<StudentInfo />} /> */}
+        
         <Route path="/department" element={<BranchCard />} />
         <Route path="/department/:bid" element={<SemesterCard />} />
-        {/* <Route path="/department/:bid/semester"  element={<SemesterCard/>} /> */}
         <Route path="/department/:bid/semester/:id" element={<SemInfo/>} />
         <Route path="/department/:bid/semester/:id/students" element={<StudentsCard />} />
         <Route path="/department/:bid/semester/:id/students/:sid" element={<StudentInfo />} /> 

@@ -1,7 +1,8 @@
 import SemesterDetails from './SemDetails';
-import BasicCard from './card';
+import ImgCard from './card';
 import { Link } from 'react-router-dom';
 import "./format.css";
+
 
 function SemesterCard(props){
     let semList = SemesterDetails.allSem();
@@ -10,7 +11,7 @@ function SemesterCard(props){
             {semList.map((sem) => (
                 <div className="container" key={sem.semId}>
                     <Link to={`/department/${props.branchId}/semester/${sem.semId}`}>
-                        <BasicCard name={sem.branchName} address={sem.semId} />
+                        <ImgCard txt="Semester" sid={sem.semId} img={sem.img}/>
                     </Link>
                 </div>
             ))}

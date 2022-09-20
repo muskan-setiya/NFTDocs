@@ -1,0 +1,26 @@
+.box{
+    background-color: black;
+    border-radius: 20px;
+}
+
+.dept{
+    background-color: #282c34;
+    align-content: center;
+    height: 260;
+    width: 360;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+
+.box:hover{
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+}
+
+.imgCard{
+    height: 300px;
+    width: 350px;
+    display:flexbox;
+    object-fit: fill;
+    image-rendering: crisp-edges;
+    align-items: center;
+}
