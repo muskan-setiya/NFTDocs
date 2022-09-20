@@ -19,6 +19,7 @@ import Create from './Create.js'
 import MyListedRecords from './MyListedRecord.js'
 import MyPurchases from './MyPurchases.js'
 import { Spinner } from 'react-bootstrap'
+import Main from "./Main";
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">    
+      
 
           <Navigation web3Handler={web3Handler} account={account} />        
           {loading ? (
@@ -64,9 +66,16 @@ function App() {
               <Spinner animation="border" style={{ display: 'flex' }} />
               <p className='mx-3 my-0'>Awaiting Metamask Connection...</p>
             </div>
+
+
+
           ) : (
             <Routes>
-              <Route path="/" element={
+              {/* <Route exact path="/" element={
+            <Main />
+              }/> */}
+
+              <Route path="/a" element={
                 <Home collegeplatform={collegeplatform} nft={nft}/>
               } />
               <Route path="/create" element={
