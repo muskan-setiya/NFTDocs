@@ -173,8 +173,10 @@ function App() {
       </Routes>
     </div>
 
+    <Navigation />
     <div className="App">
-      <h2>Welcome to NFTDocs!</h2>
+      
+      <center><h2 className="animate-character">Welcome to NFTDocs!</h2></center>
       <Routes>
         
         <Route path="/department" element={<BranchCard />} />

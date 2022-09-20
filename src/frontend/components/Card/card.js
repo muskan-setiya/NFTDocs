@@ -164,7 +164,7 @@ function ImgCard(props) {
           <Card.Text>
               {props.address}
           </Card.Text>
-          <Card.Text>{props.txt} - {props.sid}</Card.Text>
+          <Card.Text>{props.txt}  {props.sid}</Card.Text>
         </Card.Body>
         
       </Card>

@@ -14,6 +14,7 @@ const Navigation = ({ web3Handler, account }) => {
     const isVerifier = path.startsWith("/verifier");
 
     return (
+<<<<<<< HEAD
         <Navbar expand="lg" bg="secondary" variant="dark" >
             <Container>
                 <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
@@ -32,6 +33,23 @@ const Navigation = ({ web3Handler, account }) => {
                     {isVerifier ? <Nav className="me-auto">
                         <Nav.Link as={Link} to="/verifier" onClick={() => navigate("/verifier")}>Home</Nav.Link>
                     </Nav> : <></>}
+=======
+        <Navbar expand="lg" bg="secondary" variant="dark" className="nav">
+            <Container>
+                <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
+                    <img src={market} width="40" height="40" className="" alt="" />
+                    &nbsp; NFTDocs
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/create">Create</Nav.Link>
+                        <Nav.Link as={Link} to="/my-listed-items">My Listed Items</Nav.Link>
+                        <Nav.Link as={Link} to="/my-purchases">My Purchases</Nav.Link>
+                        <Nav.Link as={Link} to="/department">View Departments</Nav.Link>
+                    </Nav>
+>>>>>>> 333eca2 (style edit: grid view; added navbar)
                     <Nav>
                         {account ? (
                             <Nav.Link

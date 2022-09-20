@@ -24,6 +24,7 @@ function BranchCard(){
                 <div className='column'>
             
                 <Row>
+                
                 <div className="container" key={dept.branchId} >
                     
                     {Array.from({length:1}).map((_,idx) => (
