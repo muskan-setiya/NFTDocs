@@ -119,6 +119,7 @@ function App() {
     // </BrowserRouter>
     
     <BrowserRouter>
+<<<<<<< HEAD
       <div className="App">
         <Navigation web3Handler={web3Handler} account={account} studentAccount={studentAccount} teacherAccount={teacherAccount} verifierAccount={verifierAccount} />
 
@@ -149,6 +150,19 @@ function App() {
 
         {/* )} */}
       </div>
+=======
+    <div className="App">
+      <h2>Welcome to NFTDocs!</h2>
+      <Routes>
+        
+        <Route path="/department" element={<BranchCard />} />
+        <Route path="/department/:bid" element={<SemesterCard />} />
+        <Route path="/department/:bid/semester/:id" element={<SemInfo/>} />
+        <Route path="/department/:bid/semester/:id/students" element={<StudentsCard />} />
+        <Route path="/department/:bid/semester/:id/students/:sid" element={<StudentInfo />} /> 
+      </Routes>
+    </div>
+>>>>>>> 6822a90 (changed ui)
     </BrowserRouter>
   );
 }
