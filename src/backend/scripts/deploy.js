@@ -1,19 +1,25 @@
+const { ethers } = require("hardhat");
+
 async function main() {
+
   const [deployer] = await ethers.getSigners();
 
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
+  // deploy contracts here:
+  const NFT=await ethers.getContractFactory("NFT");
+  const nft=await NFT.deploy();
+
+  const CollegePlatform=await ethers.getContractFactory("CollegePlatform");
+  const collegeplatform=await CollegePlatform.deploy();
+
+  console.log("NFT contract address: ",nft.address)
+  console.log("College Platform contract address: ",collegeplatform.address)
   
-  // Get the ContractFactories and Signers here.
-  const NFT = await ethers.getContractFactory("NFT");
-  const Marketplace = await ethers.getContractFactory("Marketplace");
-  // deploy contracts
-  const marketplace = await Marketplace.deploy(1);
-  const nft = await NFT.deploy();
-  // Save copies of each contracts abi and address to the frontend.
-  saveFrontendFiles(marketplace , "Marketplace");
-  saveFrontendFiles(nft , "NFT");
+  // For each contract, pass the deployed contract and name to this function to save a copy of the contract ABI and address to the front end.
+  saveFrontendFiles(nft,"NFT");
+  saveFrontendFiles(collegeplatform,"CollegePlatform");
 }
 
 function saveFrontendFiles(contract, name) {
