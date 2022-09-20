@@ -1,6 +1,7 @@
 .App {
   flex-wrap: wrap;
   background-color: #ffffff;
+  background-color: #282c34;
   padding: 4rem;
   display: flex;
   justify-content: center;
@@ -16,6 +17,7 @@
 
 .App-header {
   background-color: #7393ce;
+  background-color: #424853;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,3 +73,5 @@ h2{
   }
 }
 
+  color: aquamarine;
+}

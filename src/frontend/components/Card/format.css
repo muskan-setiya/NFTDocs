@@ -20,6 +20,7 @@
 body {
   font-family: var(--font-roboto);
   background-color: #ffffff;
+  background-color: #282c34;
 }
 
 .app {
@@ -109,7 +110,8 @@ h1 {
   font-family: var(--font-raleway);
 }
 
-.container1 {
+
+.container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
@@ -119,7 +121,8 @@ h1 {
   font-size: medium;
 }
 
-.container1:hover {
+
+.container:hover {
     box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
     transform: scale(1.05, 1.05);
   }
@@ -269,3 +272,4 @@ h1 {
     margin-bottom: 20px;
   }
 }
+

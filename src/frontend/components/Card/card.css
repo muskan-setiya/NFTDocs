@@ -6,6 +6,7 @@
 .dept{
     
     background-color: #ffffff;
+    background-color: #282c34;
     align-content: center;
     height: 260;
     width: 360;
@@ -15,6 +16,7 @@
 
 .box:hover{
     box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.829);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
 
 .imgCard{
