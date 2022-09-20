@@ -7,15 +7,16 @@ import "./format.css";
 function SemesterCard(props){
     let semList = SemesterDetails.allSem();
     return (
-        <>
+        <row className='row'>
             {semList.map((sem) => (
+                <div className='column'>
                 <div className="container" key={sem.semId}>
                     <Link to={`/department/${props.branchId}/semester/${sem.semId}`}>
                         <ImgCard txt="Semester" sid={sem.semId} img={sem.img}/>
                     </Link>
-                </div>
+                </div></div>
             ))}
-        </>
+        </row>
 
     )
 }

@@ -14,7 +14,7 @@ import NFTAbi from '../contractsData/NFT.json'
 import NFTAddress from '../contractsData/NFT-address.json'
 import { useState } from 'react'
 import { ethers } from "ethers"
-import { Spinner } from 'react-bootstrap'
+import { Nav, Spinner } from 'react-bootstrap'
 
 import StudentsCard from './Card/StudentsCard';
 import StudentInfo from './Card/StudentInfo';
@@ -91,8 +91,10 @@ function App() {
     // </BrowserRouter>
     
     <BrowserRouter>
+    <Navigation />
     <div className="App">
-      <h2>Welcome to NFTDocs!</h2>
+      
+      <center><h2 className="animate-character">Welcome to NFTDocs!</h2></center>
       <Routes>
         
         <Route path="/department" element={<BranchCard />} />

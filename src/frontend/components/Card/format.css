@@ -239,3 +239,30 @@ h1 {
   height: 200;
   width: 200;
 }
+
+
+.column{
+  float: center;
+  width: 25%;
+  padding: 0 10px;
+  margin-right: 150px;
+  margin-left: 100px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
