@@ -24,6 +24,9 @@ import Error from "./Error";
 
 
 
+import { useState } from 'react'
+import { ethers } from "ethers"
+import { Nav, Spinner } from 'react-bootstrap'
 
 import StudentsCard from './Card/StudentsCard';
 import StudentInfo from './Card/StudentInfo';
@@ -119,7 +122,7 @@ function App() {
     // </BrowserRouter>
     
     <BrowserRouter>
-<<<<<<< HEAD
+
       <div className="App">
         <Navigation web3Handler={web3Handler} account={account} studentAccount={studentAccount} teacherAccount={teacherAccount} verifierAccount={verifierAccount} />
 
@@ -150,9 +153,9 @@ function App() {
 
         {/* )} */}
       </div>
-=======
     <div className="App">
-      <h2>Welcome to NFTDocs!</h2>
+      
+      <center><h2 className="animate-character">Welcome to NFTDocs!</h2></center>
       <Routes>
         
         <Route path="/department" element={<BranchCard />} />
@@ -162,7 +165,7 @@ function App() {
         <Route path="/department/:bid/semester/:id/students/:sid" element={<StudentInfo />} /> 
       </Routes>
     </div>
->>>>>>> 6822a90 (changed ui)
+
     </BrowserRouter>
   );
 }

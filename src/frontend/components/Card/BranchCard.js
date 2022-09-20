@@ -8,10 +8,11 @@ import Row from 'react-bootstrap/Row';
 function BranchCard(){
     let branchList = BranchDetails.allBranch();
     return(
-        <div className='dept'>
+        
+        <row className='row'>
            {branchList.map((dept) => (
-            
-                <Row>
+                <div className='column'>
+                
                 <div className="container" key={dept.branchId} >
                     
                     {Array.from({length:1}).map((_,idx) => (
@@ -23,10 +24,9 @@ function BranchCard(){
                     ) )}
                     
                 </div>               
-                </Row>
-                
+                </div>
             ))}
-        </div>
+        </row>
     )
 }
 
