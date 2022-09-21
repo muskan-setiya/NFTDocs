@@ -29,7 +29,7 @@ function BranchCard(){
                     
                     {Array.from({length:1}).map((_,idx) => (
                         <Col>
-                            <Link to={`/department/${dept.branchId}`}>
+                            <Link to={`/teacher/department/${dept.branchId}`}>
                                 <ImgCard name={dept.branchName}  img={dept.img}/>
                             </Link>
                         </Col>    

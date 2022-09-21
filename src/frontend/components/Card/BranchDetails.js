@@ -16,7 +16,7 @@ allBranch: function(){
     return this.branch
 },
 
-getBranch: function(){
+getBranch: function(id){
     const isBranch = b => b.branchId ===id
     return this.branch.find(isBranch)
 }

@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+<<<<<<< HEAD
+=======
+import { Button } from 'react-bootstrap'
+>>>>>>> f12005a (cards)
 import { useNavigate } from 'react-router-dom'
 import "./Card/format.css";
 import Card from '@mui/material/Card';
@@ -13,8 +17,10 @@ function Login({ account, web3Handler, teacherAccount, studentAccount, verifierA
     const navigate = useNavigate();
 
     const goToStudent = () => {
+        console.log("Hello")
         web3Handler()
         if (studentAccount.toLowerCase() === account) {
+            console.log("Hello")
             navigate("/student/my-purchases");
         }
         else {
@@ -26,9 +32,14 @@ function Login({ account, web3Handler, teacherAccount, studentAccount, verifierA
 
     const goToTeacher = async () => {
         web3Handler()
+        console.log(teacherAccount,account)
         if (teacherAccount.toLowerCase() === account) {
             // navigate("/teacher/create");
+<<<<<<< HEAD
             navigate("/department")
+=======
+            navigate("/teacher/department");
+>>>>>>> f12005a (cards)
         }
         else {
             navigate("/error");

@@ -67,14 +67,14 @@ h2{
   font-size: 100px;
 } */
 
-@keyframes textclip {
+/* @keyframes textclip {
   to {
     background-position: 200% center;
   }
-}
+{
 
   color: aquamarine;
-}
+} */
 
 .animate-character
 {

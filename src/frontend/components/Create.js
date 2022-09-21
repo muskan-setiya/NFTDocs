@@ -4,11 +4,16 @@ import { Row, Form, Button } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 //const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 import { Web3Storage, getFilesFromPath } from 'web3.storage'
+import { Link } from 'react-router-dom';
+// import {branchID} from './BranchInfo';
+// import StudentDetails from "./StudentDetails";
+import StudentInfo from './Card/StudentInfo'
 
 const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMxODJmZWFhN0ZmN0ZhZThjMzRjRGU2MEM0NTU3NDREN2EyRmEwRWEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjM1OTEzOTg1NDcsIm5hbWUiOiJORlREb2NzIn0.2jKGJ7G0wmQvnR1SoXz-uD0LomhHpS3f-MZm8THWvrI'
 const client = new Web3Storage({ token })
 
 const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount }) => {
+  console.log('inside create')
   const [image, setImage] = useState('')
   //const [price, setPrice] = useState(null)
   const [name, setName] = useState('')
@@ -65,8 +70,11 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
   }
 
   if (account === teacherAccount.toLowerCase()) {
+    
     return (
+      
       <div className="container-fluid mt-5">
+        <StudentInfo />
         <div className="row">
           <main role="main" className="col-lg-12 mx-auto" style={{ maxWidth: '1000px' }}>
             <div className="content mx-auto">
@@ -105,5 +113,6 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
     )
   }
 }
+
 export default Create
 
