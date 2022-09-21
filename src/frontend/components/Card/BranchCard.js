@@ -3,7 +3,6 @@ import ImgCard from './card';
 import {Link} from 'react-router-dom';
 import "./format.css";
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
 function BranchCard(){
     let branchList = BranchDetails.allBranch();
@@ -13,7 +12,7 @@ function BranchCard(){
            {branchList.map((dept) => (
                 <div className='column'>
                 
-                <div className="container" key={dept.branchId} >
+                <div className="container1" key={dept.branchId} >
                     
                     {Array.from({length:1}).map((_,idx) => (
                         <Col>

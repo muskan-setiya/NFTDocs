@@ -4,7 +4,8 @@
 }
 
 .dept{
-    background-color: #282c34;
+    
+    background-color: #ffffff;
     align-content: center;
     height: 260;
     width: 360;
@@ -13,7 +14,7 @@
 }
 
 .box:hover{
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.829);
 }
 
 .imgCard{
@@ -23,4 +24,12 @@
     object-fit: fill;
     image-rendering: crisp-edges;
     align-items: center;
+}
+
+
+.main{
+    background-color: #a2a2a2;
+    border-radius: 10px;
+    align-items: center;
+    border-width: 0;
 }

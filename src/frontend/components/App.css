@@ -1,6 +1,6 @@
 .App {
   flex-wrap: wrap;
-  background-color: #282c34;
+  background-color: #ffffff;
   padding: 4rem;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #424853;
+  background-color: #7393ce;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,10 +39,11 @@
 }
 
 h2{
-  color: aquamarine;
+  margin-top: 20px;
+  color: rgb(29, 24, 28);
 }
 
-.animate-character
+/* .animate-character
 {
    text-transform: uppercase;
   background-image: linear-gradient(
@@ -62,10 +63,11 @@ h2{
   animation: textclip 2s linear infinite;
   display: inline-block;
   font-size: 100px;
-}
+} */
 
 @keyframes textclip {
   to {
     background-position: 200% center;
   }
 }
+
