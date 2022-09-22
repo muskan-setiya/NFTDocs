@@ -1,7 +1,5 @@
 import StudentDetails from "./StudentDetails";
 import { useParams } from "react-router-dom";
-import Create from "../Create";
-
 
 function StudentInfo() {
     let params = useParams();
@@ -11,13 +9,16 @@ function StudentInfo() {
 
     const student = StudentDetails.getStudent(studentId);
 
-
     return (
         <div>
-            <h1>Name : {student.studentName}</h1>
-            <h1>Address : {student.studentAddress}</h1>
+            <center>
+                <h2 >Name : {student.studentName}</h2>
+                <h2 >Address : {student.studentAddress}</h2>
+
+            </center>
+
         </div>
-        
+
     )
 }
 

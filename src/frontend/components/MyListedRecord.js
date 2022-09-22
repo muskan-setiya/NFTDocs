@@ -87,14 +87,15 @@ export default function MyListedRecords({ collegeplatform, nft, account, teacher
       <div className="flex justify-center">
         {listedRecords.length > 0 ?
           <div className="px-5 py-3 container">
-            <h2>Listed</h2>
+            <h2>Listed Marksheets</h2>
             <Row xs={1} md={2} lg={4} className="g-4 py-3">
               {listedRecords.map((record, idx) => (
                 <Col key={idx} className="overflow-hidden">
                   <Card>
                     <Card.Img variant="top" src={record.image} />
                     <Card.Body color="secondary">
-                      <Card.Title>{record.name}</Card.Title>
+                      <Card.Title>Muskan Setiya</Card.Title>
+                      <Card.Text>{record.name}</Card.Text>
                       <Card.Text>
                         {record.description}
                       </Card.Text>

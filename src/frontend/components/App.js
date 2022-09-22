@@ -21,12 +21,14 @@ import Login from "./Login";
 import Error from "./Error";
 
 import StudentsCard from './Card/StudentsCard';
-import StudentInfo from './Card/StudentInfo';
-import SemesterCard from "./Card/SemCard";
+
 import SemInfo from './Card/SemInfo';
 import BranchCard from './Card/BranchCard';
 
+import Chat from './Chat'
+
 import './App.css';
+import BranchInfo from "./Card/BranchInfo";
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -76,7 +78,7 @@ function App() {
     console.log("after")
   }
 
-  const studentAccount = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
+  const studentAccount = "0xcd3B766CCDd6AE721141F452C550Ca635964ce71";
   const teacherAccount = "0x70997970C51812dc3A010C7d01b50e0d17dc79C8";
   const verifierAccount = "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC";
 
@@ -91,6 +93,10 @@ function App() {
             <Login web3Handler={web3Handler} account={account} studentAccount={studentAccount} teacherAccount={teacherAccount} verifierAccount={verifierAccount} />
           } />
 
+          <Route exact path="/student/chat" element={
+            <Chat account={account} teacherAccount={teacherAccount} />
+          } />
+
           <Route exact path="/error" element={
             <Error account={account} studentAccount={studentAccount} teacherAccount={teacherAccount} verifierAccount={verifierAccount} />
           } />
@@ -101,14 +107,14 @@ function App() {
           <Route path="/teacher/department/:bid/semester/:id/students/:sid/create" element={
             <Create collegeplatform={collegeplatform} nft={nft} account={account} teacherAccount={teacherAccount} studentAccount={studentAccount} />
           } />
-          <Route path="/teacher/department/:bid/semester/:id/students/:sid/my-listed-records" element={
+          <Route path="/teacher/my-listed-marksheets" element={
             <MyListedRecords collegeplatform={collegeplatform} nft={nft} account={account} teacherAccount={teacherAccount} />
           } />
-          <Route path="/student/my-purchases" element={
+          <Route path="/student/my-marksheets" element={
             <MyPurchases collegeplatform={collegeplatform} nft={nft} account={account} studentAccount={studentAccount} />
           } />
           <Route path="/teacher/department" element={<BranchCard />} />
-          <Route path="/teacher/department/:bid" element={<SemesterCard />} />
+          <Route path="/teacher/department/:bid" element={<BranchInfo />} />
           <Route path="/teacher/department/:bid/semester/:id" element={<SemInfo />} />
           <Route path="/teacher/department/:bid/semester/:id/students/:sid" element={<StudentsCard />} />
         </Routes>

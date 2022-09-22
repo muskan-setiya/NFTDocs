@@ -1,37 +1,49 @@
-.box{
-    background-color: black;
-    border-radius: 20px;
+.box {
+  background-color: black;
+  border-radius: 20px;
 }
 
-.dept{
-    
-    background-color: #ffffff;
-    background-color: #282c34;
-    align-content: center;
-    height: 260;
-    width: 360;
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
+.dept {
+  background-color: #ffffff;
+  align-content: center;
+  height: 260;
+  width: 420px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.box:hover{
-    box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.829);
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+.box:hover {
+  box-shadow: 10px 30px 18px -8px rgba(0, 0, 0, 0.829);
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
 
-.imgCard{
-    height: 300px;
-    width: 350px;
-    display:flexbox;
-    object-fit: fill;
-    image-rendering: crisp-edges;
-    align-items: center;
+.imgCard {
+  height: 300px;
+  width: 350px;
+  display: flexbox;
+  object-fit: fill;
+  image-rendering: crisp-edges;
+  align-items: center;
 }
 
+.container1 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: double;
+  font-size: medium;
+}
 
-.main{
-    background-color: #a2a2a2;
-    border-radius: 10px;
-    align-items: center;
-    border-width: 0;
+.container1:hover {
+  box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
+  transform: scale(1.05, 1.05);
+}
+
+.main {
+  background-color: #a2a2a2;
+  border-radius: 10px;
+  align-items: center;
+  border-width: 0;
 }

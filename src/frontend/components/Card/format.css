@@ -7,10 +7,9 @@
   box-sizing: border-box;
 }
 
-.nav{
+.nav {
   background-color: #1976d2;
 }
-
 
 :root {
   --font-roboto: "Roboto Slab", serif;
@@ -20,7 +19,6 @@
 body {
   font-family: var(--font-roboto);
   background-color: #ffffff;
-  background-color: #282c34;
 }
 
 .app {
@@ -98,20 +96,19 @@ h1 {
 
 .empty {
   width: 100%;
-  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.empty h2 {
+.empty h4 {
   font-size: 1.25rem;
-  color: #f9d3b4;
+  color: #050505;
+  align-content: center;
   font-family: var(--font-raleway);
 }
 
-
-.container {
+/* .container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
@@ -119,14 +116,7 @@ h1 {
   flex-wrap: wrap;
   text-decoration: double;
   font-size: medium;
-}
-
-
-.container:hover {
-    box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
-    transform: scale(1.05, 1.05);
-  }
-
+} */
 
 .movie {
   width: 310px;
@@ -239,15 +229,14 @@ h1 {
   }
 }
 
-.studentCard{
+.studentCard {
   background-color: #282c34;
   align-content: center;
   height: 200;
   width: 200;
 }
 
-
-.column{
+.column {
   float: center;
   width: 25%;
   padding: 0 10px;
@@ -256,7 +245,9 @@ h1 {
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -273,7 +264,6 @@ h1 {
   }
 }
 
-
 .container1 {
   margin-top: 30px;
   display: flex;
@@ -285,23 +275,77 @@ h1 {
 }
 
 .container1:hover {
-    box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
-    transform: scale(1.05, 1.05);
-  }
+  box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
+  transform: scale(1.05, 1.05);
+}
 
-  .card1{
-    margin-top: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .card2{
-    margin-top: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .card3{
-    margin-top: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+.card1 {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: double;
+  font-size: medium;
+  cursor: pointer;
+}
+.card2 {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: double;
+  font-size: medium;
+  cursor: pointer;
+}
+.card3 {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: double;
+  font-size: medium;
+  cursor: pointer;
+}
 
+.card1:hover {
+  box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
+  transform: scale(1.05, 1.05);
+}
+
+.card2:hover {
+  box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
+  transform: scale(1.05, 1.05);
+}
+
+.card3:hover {
+  box-shadow: 0px 10px 10px -8px rgba(53, 43, 100, 0.459);
+  transform: scale(1.05, 1.05);
+}
+
+.mediaimg {
+  height: 240px;
+  width: 350px;
+  display: flexbox;
+  object-fit: fill;
+  image-rendering: crisp-edges;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 260px;
+}

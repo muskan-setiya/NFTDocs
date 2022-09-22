@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { ethers } from "ethers"
-import { Row, Col, Card } from 'react-bootstrap'
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Row, Col, Card, Button } from 'react-bootstrap'
 import Error from './Error'
 
 export default function MyPurchases({ collegeplatform, nft, account, studentAccount }) {
@@ -29,8 +29,6 @@ export default function MyPurchases({ collegeplatform, nft, account, studentAcco
       const metadata = await response.json()
       // define listed item object
       let sentRecord = {
-        //totalPrice,
-        //price: i.price,
         recordId: i.tokenId,
         student: i.student,
         name: metadata.name,
@@ -52,23 +50,41 @@ export default function MyPurchases({ collegeplatform, nft, account, studentAcco
 
   if (account === studentAccount.toLowerCase()) {
     return (
-      <div className="flex justify-center">
+      <div className='flex justify-center'>
         {console.log(transferred.length)}
         {transferred.length > 0 ?
           <div className="px-5 container">
+            <center>
+              <h3>Logged in as : Muskan</h3>
+            </center>
             <Row xs={1} md={2} lg={4} className="g-4 py-5">
-              {transferred.map((item, idx) => {
-                console.log("item.stud:", item.student.toLowerCase())
+              {transferred.map((record, idx) => {
+                console.log("record.stud:", record.student.toLowerCase())
                 console.log("acc:", account)
-                if (item.student.toLowerCase() === account) {
+                if (record.student.toLowerCase() === account) {
                   return (
                     <>
                       {console.log("inside")}
-                      {console.log(item)}
-                      <Col key={idx} className="overflow-hidden">
-                        <Card>
-                          <h1>{item.name}</h1>
-                          <Card.Img variant="top" src={item.image} />
+                      {console.log(record)}
+                      <Col key={idx}>
+                        <Card className="list" style={{ width: '25rem' }}>
+                          <ListGroup variant="flush">
+                            <ListGroup.Item>
+                              <>
+                                <h3>{record.name} </h3>
+                              </>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                              <>
+                                <Card.Img variant="top" src={record.image} />
+                              </>
+                            </ListGroup.Item>
+                            <ListGroup.Item>Marksheet Link :
+                              <a href={record.image} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
+                                View Marksheet
+                              </a>
+                            </ListGroup.Item>
+                          </ListGroup>
                         </Card>
                       </Col>
                     </>

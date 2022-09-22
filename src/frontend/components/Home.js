@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { ethers } from "ethers"
-import { Row, Col, Card, Button } from 'react-bootstrap'
+import { Row, Card, Button } from 'react-bootstrap'
 import Error from './Error';
+import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
+
 
 //home component will display all the listed nfts
 const Home = ({ collegeplatform, nft, account, verifierAccount, studentAccount }) => {
@@ -71,24 +72,29 @@ const Home = ({ collegeplatform, nft, account, verifierAccount, studentAccount }
           <div className="px-5 container">
             <Row xs={1} md={2} lg={4} className="g-4 py-5">
               {records.map((record, idx) => (
-                <Col key={idx} className="overflow-hidden">
-                  <Card>
-                    <Card.Img variant="top" src={record.image} />
-                    <Card.Body color="secondary">
-                      <Card.Title>{record.name}</Card.Title>
-                      <Card.Text>
-                        {record.description}
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
+                <Card style={{ width: '25rem' }}>
+                  <ListGroup variant="flush">
+                    <ListGroup.Item>
+                      <>
+                        <h2>{record.name} </h2>
+                      </>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <h4>Name : Muskan Setiya</h4>
+                    </ListGroup.Item>
+
+                    <ListGroup.Item>Marksheet Link :
+                      <a href={record.image} target="_blank" rel="noreferrer">
+                        View Marksheet
+                      </a></ListGroup.Item>
+                    <ListGroup.Item>
                       <div className='d-grid'>
                         <Button onClick={() => sendCollegeRecords(record)} variant="primary" size="lg">
                           SEND MARKSHEET!
                         </Button>
-                      </div>
-                    </Card.Footer>
-                  </Card>
-                </Col>
+                      </div></ListGroup.Item>
+                  </ListGroup>
+                </Card>
               ))}
             </Row>
           </div>

@@ -3,22 +3,22 @@ import { useParams } from 'react-router'
 import BranchCard from './BranchCard'
 import SemesterCard from './SemCard';
 
-export let branchID
-function BranchInfo(){
-    
+export let branchID;
+function BranchInfo() {
+
     let params = useParams();
-    console.log("devyani",params)
-    let bid = params.bid ;// did-Branch id
+    console.log("devyani", params)
+    let bid = params.bid;// did-Branch id
     console.log(bid)
     let branchId = parseInt(bid);
     branchID = branchId
     const DeptDetails = BranchDetails.getBranch(branchId);
 
-    return(
+    return (
         <div className='branchcard'>
-            <h1>Department : {DeptDetails.branchName}</h1>
+            <center><h2>{DeptDetails.branchName}</h2></center>
 
-            <SemesterCard branchId={branchId}/>
+            <SemesterCard branchId={branchId} />
         </div>
     )
 }

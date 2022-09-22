@@ -1,17 +1,6 @@
-
-.dept{
-    background-color: rgb(104, 110, 114);
-    align-content: center;
-    height: 260;
-    width: 360;
+.dept {
+  background-color: rgb(255, 255, 255);
+  align-content: center;
+  height: 260;
+  width: 360;
 }
-
-.container{
-    background-attachment: rgb(127, 97, 97);
-}
-
-.sem{
-    background-attachment: rgb(127, 97, 97);
-}
-
-

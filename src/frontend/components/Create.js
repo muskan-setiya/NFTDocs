@@ -1,21 +1,15 @@
 import { useState } from 'react'
-import { ethers } from "ethers"
 import { Row, Form, Button } from 'react-bootstrap'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
-//const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-import { Web3Storage, getFilesFromPath } from 'web3.storage'
-import { Link } from 'react-router-dom';
-// import {branchID} from './BranchInfo';
-// import StudentDetails from "./StudentDetails";
+import { Web3Storage } from 'web3.storage'
 import StudentInfo from './Card/StudentInfo'
+import Error from './Error'
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMxODJmZWFhN0ZmN0ZhZThjMzRjRGU2MEM0NTU3NDREN2EyRmEwRWEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjM1OTEzOTg1NDcsIm5hbWUiOiJORlREb2NzIn0.2jKGJ7G0wmQvnR1SoXz-uD0LomhHpS3f-MZm8THWvrI'
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMxODJmZWFhN0ZmN0ZhZThjMzRjRGU2MEM0NTU3NDREN2EyRmEwRWEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjM4NTkyOTYyNTEsIm5hbWUiOiJORlREb2NzX3ZlcjIifQ.ULiOFVhv5PZ-PReszSueLj7lilln2QakOf5bWLiaIio'
 const client = new Web3Storage({ token })
 
 const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount }) => {
   console.log('inside create')
   const [image, setImage] = useState('')
-  //const [price, setPrice] = useState(null)
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
   const uploadToIPFS = async (event) => {
@@ -70,9 +64,9 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
   }
 
   if (account === teacherAccount.toLowerCase()) {
-    
+
     return (
-      
+
       <div className="container-fluid mt-5">
         <StudentInfo />
         <div className="row">
@@ -89,15 +83,15 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
                   onChange={(e) => setName(e.target.value)}
                   size="lg"
                   required type="text"
-                  placeholder="Name" />
+                  placeholder="Name of Examination" />
                 <Form.Control
                   onChange={(e) => setDescription(e.target.value)}
                   size="lg"
                   required as="textarea"
-                  placeholder="Description" />
+                  placeholder="Performance Feedback" />
                 <div className="d-grid px-0">
                   <Button onClick={createNFT} variant="primary" size="lg">
-                    Create & List NFT!
+                    Create & List Marksheet!
                   </Button>
                 </div>
               </Row>
@@ -109,7 +103,7 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
   }
   else {
     return (
-      <h1>You are not authorized to view Create Page</h1>
+      <Error />
     )
   }
 }

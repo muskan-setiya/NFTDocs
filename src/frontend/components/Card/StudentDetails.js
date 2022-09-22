@@ -1,11 +1,9 @@
 const StudentDetails = {
     students: [
-
-        { studentId: 1, studentName: "Muskan", studentAddress: "0x0d048eED5c935C783E2A4D8803bF425A2Db87B57" ,img:"https://cdn5.vectorstock.com/i/thumb-large/45/59/profile-photo-placeholder-icon-design-in-gray-vector-37114559.jpg"},
-        { studentId: 2, studentName: "Devyani", studentAddress: "0x0d048eED5c935C783E2A4D8803bF425A2Db87B57" ,img:"https://cdn5.vectorstock.com/i/thumb-large/45/59/profile-photo-placeholder-icon-design-in-gray-vector-37114559.jpg"},
-        { studentId: 3, studentName: "Vanshita", studentAddress: "0x0d048eED5c935C783E2A4D8803bF425A2Db87B57" ,img:"https://cdn5.vectorstock.com/i/thumb-large/45/59/profile-photo-placeholder-icon-design-in-gray-vector-37114559.jpg"},
-        { studentId: 4, studentName: "Sunishka", studentAddress: "0x0d048eED5c935C783E2A4D8803bF425A2Db87B57" ,img:"https://cdn5.vectorstock.com/i/thumb-large/45/59/profile-photo-placeholder-icon-design-in-gray-vector-37114559.jpg"},
-
+        { studentId: 1, studentName: "Muskan Setiya", studentAddress: "0xcd3b766ccdd6ae721141f452c550ca635964ce71", img: "https://cdn-icons-png.flaticon.com/512/2837/2837567.png" },
+        { studentId: 2, studentName: "Devyani Kalamkar", studentAddress: "0xcd3b766ccdd6ae721141f452c550ca635964ce71", img: "https://cdn-icons-png.flaticon.com/512/2837/2837567.png" },
+        { studentId: 3, studentName: "Vanshita Lalwani", studentAddress: "0xcd3b766ccdd6ae721141f452c550ca635964ce71", img: "https://cdn-icons-png.flaticon.com/512/2837/2837567.png" },
+        { studentId: 4, studentName: "Sunishka Malviya", studentAddress: "0xcd3b766ccdd6ae721141f452c550ca635964ce71", img: "https://cdn-icons-png.flaticon.com/512/2837/2837567.png" },
     ],
 
     teachers: [
