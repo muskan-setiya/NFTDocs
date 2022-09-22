@@ -10,42 +10,42 @@ import BasicCard from "./card";
 import StudentInfo from "./StudentInfo";
 
 
-import {branchID} from './BranchInfo';
+import { branchID } from './BranchInfo';
 
 function StudentsCard(props) {
 
     let studentList = StudentDetails.allStudents();
     return (
-<>
-        <row className='row'>
-            {studentList.map((students) => (
-                <div className='column'>
-                <div className="container1" key={students.studentId}>
-                    <Link to={`/department/${props.branchId}/semester/${props.semId}/students/${students.studentId}`}>
-                        <ImgCard name={students.studentName} address={students.studentAddress} img={students.img}/>
-                    </Link>
-                </div></div>
-            ))}
-        </row>
-        
+        <>
+            <row className='row'>
+                {studentList.map((students) => (
+                    <div className='column'>
+                        <div className="container1" key={students.studentId}>
+                            <Link to={`/department/${props.branchId}/semester/${props.semId}/students/${students.studentId}`}>
+                                <ImgCard name={students.studentName} address={students.studentAddress} img={students.img} />
+                            </Link>
+                        </div></div>
+                ))}
+            </row>
 
-        <div>
-        <row className='row'>
-            {studentList.map((students) => (
-                <div className='column'>
-                <div className="container" key={students.studentId}>
-                    <Link to={`/teacher/department/${branchID}/semester/${props.semId}/students/${students.studentId}/create`}>
-                        <ImgCard name={students.studentName} address={students.studentAddress} img={students.img}/>
-                    </Link>
-                </div></div>
-            ))}
 
-       
+            <div>
+                <row className='row'>
+                    {studentList.map((students) => (
+                        <div className='column'>
+                            <div className="container" key={students.studentId}>
+                                <Link to={`/teacher/department/${branchID}/semester/${props.semId}/students/${students.studentId}/create`}>
+                                    <ImgCard name={students.studentName} address={students.studentAddress} img={students.img} />
+                                </Link>
+                            </div></div>
+                    ))}
 
-</row>
-        </div>
-        
-        
+
+
+                </row>
+            </div>
+
+
         </>
 
     )
