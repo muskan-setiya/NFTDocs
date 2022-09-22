@@ -16,7 +16,6 @@ function StudentInfo() {
         <div>
             <h1>Name : {student.studentName}</h1>
             <h1>Address : {student.studentAddress}</h1>
-            
         </div>
         
     )

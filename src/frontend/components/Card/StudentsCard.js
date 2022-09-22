@@ -20,8 +20,8 @@ function StudentsCard(props) {
             <row className='row'>
                 {studentList.map((students) => (
                     <div className='column'>
-                        <div className="container1" key={students.studentId}>
-                            <Link to={`/department/${props.branchId}/semester/${props.semId}/students/${students.studentId}`}>
+                        <div className="container" key={students.studentId}>
+                            <Link to={`/teacher/department/${props.branchId}/semester/${props.semId}/students/${students.studentId}/create`}>
                                 <ImgCard name={students.studentName} address={students.studentAddress} img={students.img} />
                             </Link>
                         </div></div>
@@ -29,7 +29,7 @@ function StudentsCard(props) {
             </row>
 
 
-            <div>
+            {/* <div>
                 <row className='row'>
                     {studentList.map((students) => (
                         <div className='column'>
@@ -43,7 +43,7 @@ function StudentsCard(props) {
 
 
                 </row>
-            </div>
+            </div> */}
 
 
         </>

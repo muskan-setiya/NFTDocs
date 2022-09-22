@@ -110,8 +110,7 @@ function App() {
           <Route path="/teacher/department" element={<BranchCard />} />
           <Route path="/teacher/department/:bid" element={<SemesterCard />} />
           <Route path="/teacher/department/:bid/semester/:id" element={<SemInfo />} />
-          <Route path="/teacher/department/:bid/semester/:id/students" element={<StudentsCard />} />
-          <Route path="/teacher/department/:bid/semester/:id/students/:sid" element={<StudentInfo />} />
+          <Route path="/teacher/department/:bid/semester/:id/students/:sid" element={<StudentsCard />} />
         </Routes>
       </div>
     </BrowserRouter>
