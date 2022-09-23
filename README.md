@@ -10,6 +10,7 @@
 - [React routers](https://v5.reactrouter.com/) (Navigational components)
 - [web3.storage](https://web3.storage/) (IPFS)
 - [Polygon](https://polygon.technology/) (Testing Framework)
+- [XMTP](https://xmtp.com/)
 
 ## Requirements For Initial Setup
 - Install [NodeJS](https://nodejs.org/en/), should work with any node version below 16.5.0
