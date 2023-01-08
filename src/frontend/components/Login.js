@@ -65,11 +65,11 @@ function Login({ account, web3Handler, teacherAccount, studentAccount, verifierA
               >
                 <CardMedia
                   component="img"
-                  image="https://cdn-icons-png.flaticon.com/512/2837/2837567.png"
+                  image="https://t4.ftcdn.net/jpg/00/96/79/23/240_F_96792385_uNo7a5isquPQWohvBpxpGIxnNGCvmvhX.jpg"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Student
+                    Doctor
                   </Typography>
 
                 </CardContent>
@@ -89,7 +89,7 @@ function Login({ account, web3Handler, teacherAccount, studentAccount, verifierA
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Teacher
+                    
                   </Typography>
                 </CardContent>
               </Card>

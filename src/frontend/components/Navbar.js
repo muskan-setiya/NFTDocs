@@ -15,8 +15,8 @@ const Navigation = ({ web3Handler, account }) => {
             <Container>
                 <Navbar.Brand>
                     <Link to={"/"}>
-                        <img src='https://cdn-icons-png.flaticon.com/512/5802/5802493.png' width="40" height="40" className="" alt="" /></Link>
-                    &nbsp; NFTDocs
+                        <img src='https://cdn-icons-png.flaticon.com/128/2480/2480303.png' width="40" height="40" className="" alt="" /></Link>
+                    &nbsp; Med3
 
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
