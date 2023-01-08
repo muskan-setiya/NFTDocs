@@ -33,7 +33,7 @@ const Create = ({ collegeplatform, nft, studentAccount, account, teacherAccount 
     //if all fields are written or not
     console.log(image)
     if (!image || !name || !description) return
-    console.log("heeee")
+    console.log("hee")
     try {//add metadata to ipfs in json object format by passing through stringify method
       console.log(image)
       const result = await client.put([new File([JSON.stringify({ name: name, image: image, description: description })], 'metadata.json', { type: 'image/jpg' })])
